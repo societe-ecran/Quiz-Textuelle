@@ -96,7 +96,7 @@ history.push("/")
       <div className={`${whoVisibility} `}>
         {Winner()}
 
-        <div className=" mx-auto w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 text-2xl transform -skew-y-6 ">
+        <div className=" mx-auto pt-6 w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 text-2xl transform -skew-y-6 ">
           <div className="Bubblegum">
             Nous considerons que le feminisme carceral et le reformisme sont des
             impasses politiques. la police et le systeme judiciaire sont des
