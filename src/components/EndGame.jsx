@@ -110,14 +110,14 @@ history.push("/")
           <div className="wmshapes text-right flex justify-end pt-3">
             v <div className="Fighting pl-2">GROS KISS</div>
           </div>
-          <div className="Feeling text-right text-l">Textuelles</div>
-          <div className=" text-right">textuelles@riseup.net </div>
+          <div className="Feeling text-right pt-2 text-4xl">Textuelles</div>
+          <div className=" text-right text-sm">textuelles@riseup.net </div>
         </div>
 
-        <div>
-          <div className="Filxgirl text-4xl ml-6 mr-6 pt-12">BIBLIOGRAPHIE</div>
+        <div className=" mx-auto w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 ">
+          <div className="Filxgirl text-4xl  pt-12">BIBLIOGRAPHIE</div>
 
-          <div className="text-l mx-auto w-6/6 md:w-3/3  lg:w-3/3 xl:w-3/3 ml-6 mb-12">
+          <div className="text-l mb-12">
             <span className="font-bold">DORLIN Elsa</span>,{" "}
             <span className="italic">
               Se défendre, pour une philosophie de la violence
