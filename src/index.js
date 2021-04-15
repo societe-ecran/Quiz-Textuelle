@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+// import App from './App';
+import "./App.css";
 import reportWebVitals from './reportWebVitals';
+import Routerz from './components/Router'
+import { UserProvider } from './components/utils/UserContext'
 
 ReactDOM.render(
+  <UserProvider value={[]}>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Routerz />
+  </React.StrictMode>
+  </UserProvider>
+,
   document.getElementById('root')
 );
 
