@@ -1,24 +1,24 @@
 import React from "react";
 import dataQuestions from "./dataQuestion";
 import Question from "./Question";
-import {
-  Animator,
-  ScrollContainer,
-  ScrollPage,
-  batch,
-  Fade,
-  FadeIn,
-  Move,
-  MoveIn,
-  MoveOut,
-  Sticky,
-  StickyIn,
-  ZoomIn,
-} from "react-scroll-motion";
+// import {
+//   // Animator,
+//   // ScrollContainer,
+//   // ScrollPage,
+//   batch,
+//   Fade,
+//   FadeIn,
+//   Move,
+//   // MoveIn,
+//   // MoveOut,
+//   Sticky,
+//   StickyIn,
+//   ZoomIn,
+// } from "react-scroll-motion";
 
-function Questions(props) {
-  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
-  const FadeUp = batch(Fade(), Move(), Sticky());
+function Questions() {
+  // const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+  // const FadeUp = batch(Fade(), Move(), Sticky());
 
   return (
     <>

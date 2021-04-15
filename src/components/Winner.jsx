@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import WhoAreYou from "./dataWhoAreYou";
 import WhoAreYouCopy from './dataWhoAreYouCopy'
 import symboles from "./utils/symboles";
@@ -10,7 +10,7 @@ import "@brainhubeu/react-carousel/lib/style.css";
 function Winner() {
     ScoreCalcul()
   const score = ScoreCalcul();
-  const [scale, setScale] = useState("");
+//   const [scale, setScale] = useState("");
   const youAre = [];
 
   function trie() {
@@ -51,7 +51,9 @@ function Winner() {
                   <div class="flex justify-center">
                     <div className="rounded-full mx-auto absolute -top-20 w-32 h-32 shadow-2xl bg-white">
                       <div
-                        className={`${who.taille} ${scale} ${
+                        className={`${who.taille} 
+                       
+                        ${
                           i === 0 && "fushia"
                         }`}
                       >

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import symboles from "./utils/symboles";
-import { motion } from "framer-motion";
 import "../App.css";
 
 

@@ -4,21 +4,19 @@ import Questions from "./components/Questions";
 import anime from "animejs/lib/anime.es.js";
 import coueurplanete from "./images/coeurplanete.png";
 import etoiles from "./images/etoiles.jpg";
-import { useHistory } from "react-router-dom";
 import UserContext from './components/utils/UserContext'
-import Slider from './components/slider'
+
 
 function App() {
-  const history = useHistory();
-  const [display, setDisplay] = useState("invisible");
+  // const [display, setDisplay] = useState("invisible");
   const [headerVisibility, setheaderVisibility] = useState("block");
   const [questionsVisibility, setquestionsVisibility] = useState("hidden");
-  const [play, setPlay] = useState("");
+  // const [play, setPlay] = useState("");
   const choiceTable = useContext(UserContext)
   console.log(choiceTable)
 
   useEffect(() => {
-    setDisplay("block");
+    // setDisplay("block");
     setquestionsVisibility("hidden");
     anime
       .timeline({ loop: false })
@@ -52,7 +50,9 @@ function App() {
         duration: 600,
         delay: 1400,
       });
-  }, play);
+  }, []
+  // play 
+  );
 
   const handleClick = () => {
     setquestionsVisibility("block");

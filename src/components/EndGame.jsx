@@ -29,6 +29,8 @@ function EndGame() {
       case "diams":
         diams++;
         break;
+        default :
+        console.log("")
     }
   }
 

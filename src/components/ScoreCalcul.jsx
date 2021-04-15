@@ -1,6 +1,5 @@
 import {useContext} from 'react'
 import UserContext from "./utils/UserContext";
-import WhoAreYou from "./dataWhoAreYou";
 
 function ScoreCalcul() {
     const choiceTable = useContext(UserContext);
@@ -30,6 +29,8 @@ function ScoreCalcul() {
         case "diams":
           diams++;
           break;
+          default:
+            console.log("")
       }
     }
   
