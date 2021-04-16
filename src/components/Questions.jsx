@@ -48,7 +48,7 @@ function Questions() {
                 <Animator
                   animation={batch(Fade(0), Sticky(), MoveOut(0, -3000))}
                 > */}
-              <div id={i } className="text-center margin-auto mt-64 pt-64">
+              <div id={i } className="mx-auto w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3  mt-64 pt-64">
                 <Question
                   numero={question.numero}
                   question={question.question}

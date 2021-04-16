@@ -4,16 +4,24 @@ import anime from "animejs/lib/anime.es.js";
 import Winner from "./Winner";
 import { Ellipsis } from "react-spinners-css";
 import { useHistory } from "react-router-dom";
+import pdf from '../images/guide.pdf'
+// import { useWindowSize } from 'react-use'
+// import Confetti from 'react-confetti'
+import Confetti from 'react-dom-confetti';
 
 function EndGame() {
   const choiceTable = useContext(UserContext);
   const [scoreVisibility, setScoreVisibility] = useState("block");
   const [whoVisibility, setWhoVisibility] = useState("hidden");
+  const [confetti, setconfetti] = useState(false)
   const history = useHistory();
+  // const { width, height } = useWindowSize()
   var smile = 0;
   var peace = 0;
   var feuille = 0;
   var diams = 0;
+
+  const EtleWinnerIs=Winner()
 
   for (let i = 0; i < choiceTable.length; ++i) {
     switch (choiceTable[i]) {
@@ -54,9 +62,9 @@ function EndGame() {
 
     const timer = setTimeout(() => {
       setScoreVisibility("hidden");
-
       setWhoVisibility("block");
-    }, 3300);
+      setconfetti(true)
+    }, 4000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -65,8 +73,22 @@ history.push("/")
 
   }
 
+  const config = {
+    angle: "90",
+    spread: 360,
+    startVelocity: 60,
+    elementCount: "500",
+    dragFriction: 0.12,
+    duration: "6520",
+    stagger: 3,
+    width: "10px",
+    height: "10px",
+    perspective: "500px",
+    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
+  };
+
   return (
-    <>
+    <div className="body">
       <div
         className={`${scoreVisibility} ml6 flex justify-center mt-24 items-center `}
       >
@@ -94,9 +116,25 @@ history.push("/")
       </div>
 
       <div className={`${whoVisibility} `}>
-        {Winner()}
+      {/* <Confetti
+      recycle={true}
+      numberOfPieces={500}
+      run={true}
+      wind={0.05}
+      // width={width}
+      // height={height}
+    /> */}
 
-        <div className=" mx-auto pt-6 w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 text-2xl transform -skew-y-6 ">
+<div className="flex justify-center z">
+  <Confetti active={confetti } config={ config }/>
+</div>
+
+<div className='z2'>
+   {EtleWinnerIs}
+</div>
+       
+
+        <div className=" mx-auto pt-12 w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 text-2xl transform -skew-y-6 ">
           <div className="Bubblegum">
             Nous considerons que le feminisme carceral et le reformisme sont des
             impasses politiques. la police et le systeme judiciaire sont des
@@ -115,7 +153,7 @@ history.push("/")
         </div>
 
         <div className=" mx-auto w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 ">
-          <div className="Filxgirl text-4xl  pt-12">BIBLIOGRAPHIE</div>
+          <div className="Filxgirl text-4xl  pt-24">BIBLIOGRAPHIE</div>
 
           <div className="text-l mb-12">
             <span className="font-bold">DORLIN Elsa</span>,{" "}
@@ -176,11 +214,17 @@ history.push("/")
         </div>
 
         <div
-          className={`flex justify-center items-center text-4xl titre transform -skew-y-6 pt-24`}
+          className={`flex justify-center items-center pr-6 text-4xl titre transform -skew-y-6 pt-24`}
         >
-          <button onClick={() => playAgain()} className="ml-6  but">
+          <button onClick={() => playAgain()} className="pr-6  but">
             <a className="" href="#top">
               Rejouer
+            </a>
+          </button>
+
+          <button className="pl-12 but">
+            <a className="" href={pdf}>
+              Télécharger le Quizz
             </a>
           </button>
         </div>
@@ -191,7 +235,7 @@ history.push("/")
           <span>{" by {Société Ecrans}"}</span>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -4,21 +4,17 @@ import WhoAreYouCopy from './dataWhoAreYouCopy'
 import symboles from "./utils/symboles";
 import ScoreCalcul from "./ScoreCalcul";
 import "../App.css";
-import Carousel, { slidesToShowPlugin } from "@brainhubeu/react-carousel";
+import Carousel, { slidesToShowPlugin, arrowsPlugin } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 function Winner() {
-    ScoreCalcul()
+    // ScoreCalcul()
   const score = ScoreCalcul();
-//   const [scale, setScale] = useState("");
   const youAre = [];
 
   function trie() {
     for (let i = 0; i < WhoAreYou.length; i++) {
-      console.log(score[0].symbole);
-      console.log(WhoAreYou[i].symbole);
       if (WhoAreYou[i].symbole === score[0].symbole) {
-        console.log("trouvé");
         youAre.push(WhoAreYou[i]);
         WhoAreYouCopy.splice(i,1)
         WhoAreYouCopy.forEach((element) => {
@@ -28,6 +24,8 @@ function Winner() {
     }
   }
   trie();
+
+console.log(youAre)
 
   return (
     <>
@@ -41,6 +39,16 @@ function Winner() {
               numberOfSlides: 2,
             },
           },
+          // {
+          //   resolve: arrowsPlugin,
+          //   options: {
+          //     arrowLeft: <button><span className = "distro2 text-4xl">v</span></button>,
+          //     // arrowLeftDisabled:<button><Icon name="angle-left" /></button>,
+          //     arrowRight: <button><span className = "distro2 text-4xl">v</span></button>,
+          //     // arrowRightDisabled: <button><Icon name="angle-right" /></button>,
+          //     // addArrowClickHandler: true,
+          //   }
+          // }
         ]}
       >
         {youAre.map((who, i) => {

@@ -1,22 +1,15 @@
-import React, { useState, useEffect, useContext } from "react";
-import "./App.css";
+import React, { useState, useEffect } from "react";
 import Questions from "./components/Questions";
 import anime from "animejs/lib/anime.es.js";
 import coueurplanete from "./images/coeurplanete.png";
 import etoiles from "./images/etoiles.jpg";
-import UserContext from './components/utils/UserContext'
-
+import "./App.css";
 
 function App() {
-  // const [display, setDisplay] = useState("invisible");
   const [headerVisibility, setheaderVisibility] = useState("block");
   const [questionsVisibility, setquestionsVisibility] = useState("hidden");
-  // const [play, setPlay] = useState("");
-  const choiceTable = useContext(UserContext)
-  console.log(choiceTable)
 
   useEffect(() => {
-    // setDisplay("block");
     setquestionsVisibility("hidden");
     anime
       .timeline({ loop: false })
@@ -60,7 +53,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className='body'>
       <div className={`${headerVisibility}`}>
         <div id="top" className="flex justify-center mt-24">
           <div className="transform -skew-y-6">
@@ -92,7 +85,7 @@ function App() {
         <div className="flex justify-center shadow-lg  transform -skew-y-6">
           <div className=" text-l ">
             <div className="encore spicy text-3xl imageMove ml-24  pt-2 pb-6">
-              Répond à notre test et découvre les liaisons plus ou moins
+              Réponds à notre test et découvre les liaisons plus ou moins
               dangereuses
               <br />
               que ton féminisme entretient avec la police, l'Etat et la justice.
@@ -118,7 +111,7 @@ function App() {
           <Questions />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
