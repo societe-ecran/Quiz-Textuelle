@@ -14,9 +14,12 @@ function Winner() {
   const score = ScoreCalcul();
   const youAre = [];
 
+
+console.log()
   function trie() {
     for (let i = 0; i < WhoAreYou.length; i++) {
       if (WhoAreYou[i].symbole === score[0].symbole) {
+        console.log(WhoAreYou[i].symbole);  console.log(score[0].symbole)
         youAre.push(WhoAreYou[i]);
         WhoAreYouCopy.splice(i,1)
         WhoAreYouCopy.forEach((element) => {
