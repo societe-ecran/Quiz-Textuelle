@@ -4,7 +4,9 @@ import WhoAreYouCopy from './dataWhoAreYouCopy'
 import symboles from "./utils/symboles";
 import ScoreCalcul from "./ScoreCalcul";
 import "../App.css";
-import Carousel, { slidesToShowPlugin, arrowsPlugin } from "@brainhubeu/react-carousel";
+import Carousel, { slidesToShowPlugin,
+  //  arrowsPlugin 
+  } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 function Winner() {
