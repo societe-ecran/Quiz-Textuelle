@@ -15,7 +15,6 @@ function EndGame() {
   const [whoVisibility, setWhoVisibility] = useState("hidden");
   const [confetti, setconfetti] = useState(false)
   const history = useHistory();
-  // const { width, height } = useWindowSize()
   var smile = 0;
   var peace = 0;
   var feuille = 0;

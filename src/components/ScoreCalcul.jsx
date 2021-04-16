@@ -47,6 +47,10 @@ function ScoreCalcul() {
     });
   
 
+
+
+
+    
   //   for (let i = 0; i < WhoAreYou.length; i++) {
   //   if (WhoAreYou[i].symbole === result[0].symbole ) {
   //     console.log("trouvé");

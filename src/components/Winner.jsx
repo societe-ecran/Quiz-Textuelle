@@ -1,48 +1,51 @@
 import React from "react";
 import WhoAreYou from "./dataWhoAreYou";
-import WhoAreYouCopy from './dataWhoAreYouCopy'
+import WhoAreYouCopy from "./dataWhoAreYouCopy";
 import symboles from "./utils/symboles";
 import ScoreCalcul from "./ScoreCalcul";
 import "../App.css";
-import Carousel, { slidesToShowPlugin,
-  //  arrowsPlugin 
-  } from "@brainhubeu/react-carousel";
+import Carousel, {
+  slidesToShowPlugin,
+  //  arrowsPlugin
+} from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 function Winner() {
-    // ScoreCalcul()
   const score = ScoreCalcul();
   const youAre = [];
 
-
-console.log()
-  function trie() {
-    for (let i = 0; i < WhoAreYou.length; i++) {
-      if (WhoAreYou[i].symbole === score[0].symbole) {
-        console.log(WhoAreYou[i].symbole);  console.log(score[0].symbole)
-        youAre.push(WhoAreYou[i]);
-        WhoAreYouCopy.splice(i,1);
-      }
-    }
-      WhoAreYouCopy.forEach((element) => {
-          youAre.push(element);
-        });
-  }
-
-  trie();
-
-  // for (let i = 0; i < WhoAreYou.length; i++) {
-  //   if (WhoAreYou[i].symbole === score[0].symbole) {
-  //     WhoAreYouCopy.splice(i,1);
-  //     // WhoAreYouCopy.forEach((element) => {
-  //     //   youAre.push(element);
-  //     // });
+  // function trie() {
+  //   for (let i = 0; i < WhoAreYou.length; i++) {
+  //     if (WhoAreYou[i].symbole === score[0].symbole) {
+  //       console.log(WhoAreYou[i].symbole);  console.log(score[0].symbole)
+  //       youAre.push(WhoAreYou[i]);
+  //       // WhoAreYouCopy.splice(i,1);
+  //     }
   //   }
+  //     WhoAreYouCopy.forEach((element) => {
+  //         youAre.push(element);
+  //       });
   // }
 
+  // trie();
+
+  function cut(who) {
+    return who.symbole === score[0].symbole;
+  }
+  const reste = WhoAreYou.find(cut);
+  youAre.push(reste)
+
+  for (let i = 0; i < WhoAreYou.length; i++) {
+    if (WhoAreYou[i].symbole === score[0].symbole) {
+      WhoAreYouCopy.splice(i,1);
+    }
+  }
+
+  WhoAreYouCopy.forEach((element) => {
+    youAre.push(element);
+  });
 
 
-console.log(youAre)
 
   return (
     <>
@@ -78,9 +81,7 @@ console.log(youAre)
                       <div
                         className={`${who.taille} 
                        
-                        ${
-                          i === 0 && "fushia"
-                        }`}
+                        ${i === 0 && "fushia"}`}
                       >
                         {symboles(who.symbole)}
                       </div>
