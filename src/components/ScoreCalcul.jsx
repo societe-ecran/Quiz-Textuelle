@@ -14,7 +14,7 @@ function ScoreCalcul() {
     //   { symbole: 'feuille', score:0 },
     //   { symbole: 'smile', score:0 },
     // ];
-
+    console.log(choiceTable)
     for (let i = 0; i < choiceTable.length; ++i) {
       switch (choiceTable[i]) {
         case "smile":
@@ -47,10 +47,6 @@ function ScoreCalcul() {
     });
   
 
-
-
-
-    
   //   for (let i = 0; i < WhoAreYou.length; i++) {
   //   if (WhoAreYou[i].symbole === result[0].symbole ) {
   //     console.log("trouvé");

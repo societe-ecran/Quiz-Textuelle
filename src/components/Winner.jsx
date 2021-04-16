@@ -53,6 +53,7 @@ function Winner() {
         plugins={[
           "centered",
           "infinite",
+          'clickToChange',
           {
             resolve: slidesToShowPlugin,
             options: {

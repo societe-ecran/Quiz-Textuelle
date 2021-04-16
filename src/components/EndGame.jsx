@@ -4,23 +4,24 @@ import anime from "animejs/lib/anime.es.js";
 import Winner from "./Winner";
 import { Ellipsis } from "react-spinners-css";
 import { useHistory } from "react-router-dom";
-import pdf from '../images/guide.pdf'
-// import { useWindowSize } from 'react-use'
-// import Confetti from 'react-confetti'
-import Confetti from 'react-dom-confetti';
+import pdf from "../images/guide.pdf";
+import Confetti from "react-dom-confetti";
+// import useSound from "use-sound";
+// import applause from "../images/applause.mp3";
 
 function EndGame() {
   const choiceTable = useContext(UserContext);
   const [scoreVisibility, setScoreVisibility] = useState("block");
   const [whoVisibility, setWhoVisibility] = useState("hidden");
-  const [confetti, setconfetti] = useState(false)
+  const [confetti, setconfetti] = useState(false);
   const history = useHistory();
+  // const [play] = useSound(applause);
   var smile = 0;
   var peace = 0;
   var feuille = 0;
   var diams = 0;
 
-  const EtleWinnerIs=Winner()
+  const EtleWinnerIs = Winner();
 
   for (let i = 0; i < choiceTable.length; ++i) {
     switch (choiceTable[i]) {
@@ -36,8 +37,8 @@ function EndGame() {
       case "diams":
         diams++;
         break;
-        default :
-        console.log("")
+      default:
+        console.log("");
     }
   }
 
@@ -62,15 +63,15 @@ function EndGame() {
     const timer = setTimeout(() => {
       setScoreVisibility("hidden");
       setWhoVisibility("block");
-      setconfetti(true)
+      // play();
+      setconfetti(true);
     }, 4000);
     return () => clearTimeout(timer);
   }, []);
 
-  const playAgain=()=>{
-history.push("/")
-
-  }
+  const playAgain = () => {
+    history.push("/");
+  };
 
   const config = {
     angle: "90",
@@ -83,11 +84,11 @@ history.push("/")
     width: "10px",
     height: "10px",
     perspective: "500px",
-    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
+    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
   };
 
   return (
-    <div className="body">
+    <div className="">
       <div
         className={`${scoreVisibility} ml6 flex justify-center mt-24 items-center `}
       >
@@ -115,7 +116,7 @@ history.push("/")
       </div>
 
       <div className={`${whoVisibility} `}>
-      {/* <Confetti
+        {/* <Confetti
       recycle={true}
       numberOfPieces={500}
       run={true}
@@ -124,14 +125,11 @@ history.push("/")
       // height={height}
     /> */}
 
-<div className="flex justify-center z">
-  <Confetti active={confetti } config={ config }/>
-</div>
+        <div className="flex justify-center z">
+          <Confetti active={confetti} config={config} />
+        </div>
 
-<div className='z2'>
-   {EtleWinnerIs}
-</div>
-       
+        <div className="z2">{EtleWinnerIs}</div>
 
         <div className=" mx-auto pt-12 w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 text-2xl transform -skew-y-6 ">
           <div className="Bubblegum">
@@ -222,7 +220,7 @@ history.push("/")
           </button>
 
           <button className="pl-12 but">
-            <a className="" href={pdf}>
+            <a className="" href={pdf} target="_blank" rel="noreferrer">
               Télécharger le Quizz
             </a>
           </button>
