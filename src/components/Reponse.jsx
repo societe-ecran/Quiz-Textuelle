@@ -24,7 +24,7 @@ function Reponse(props) {
   };
 
   return (
-    <div className="flex justify-center  mb-2 items-center">
+    <div className="flex justify-center mt-3 mb-2 items-center">
       <div
         style={{ color }}
         onClick={() => handleClick()}
@@ -32,7 +32,7 @@ function Reponse(props) {
       >
         {symboles(props.symbole)}
       </div>
-      <div className="text-left">{props.text}</div>
+      <div className="text-left text-sm">{props.text}</div>
     </div>
   );
 }

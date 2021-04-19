@@ -55,7 +55,7 @@ function App() {
   return (
     <div className='body'>
       <div className={`${headerVisibility}`}>
-        <div id="top" className="flex justify-center mt-24">
+        <div id="top" className="flex justify-center mt-12 md:mt-24">
           <div className="transform -skew-y-6">
             <img
               src={etoiles}
@@ -65,7 +65,7 @@ function App() {
           </div>
           <button></button>
 
-          <div className="text-6xl uppercase text-center margin-auto titre  transform -skew-y-6 ">
+          <div className="text-3xl md:text-6xl uppercase text-center margin-auto titre  transform -skew-y-6 ">
             <span className=" word">MARLENE</span> <br />
             <span className="word">SCHIAPPA, BELLA,</span>
             <br />
@@ -82,12 +82,12 @@ function App() {
           </div>
         </div>
 
-        <div className="flex justify-center shadow-lg  transform -skew-y-6">
+        <div className="flex justify-center shadow-lg  transform -skew-y-6 ">
           <div className=" text-l ">
-            <div className="encore spicy text-3xl imageMove ml-24  pt-2 pb-6">
+            <div className="encore spicy text-xl mx-3 md:text-3xl imageMove md:ml-24  pt-2 pb-6">
               Réponds à notre test et découvre les liaisons plus ou moins
               dangereuses
-              <br />
+              <br className='hidden md:inline'/>
               que ton féminisme entretient avec la police, l'Etat et la justice.
               <br />
             
@@ -95,7 +95,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex justify-center text-4xl titre transform -skew-y-6 pt-24 ">
+        <div className="flex justify-center text-4xl titre transform -skew-y-6 pt-8 md:pt-24 ">
           <button onClick={() => handleClick()} className="encore imageMove go ">
             GO !
           </button>
@@ -106,7 +106,7 @@ function App() {
       <div className=
       {`${questionsVisibility}`}
       >
-        <div className="mt-24 mx-12">
+        <div className="mt-24 mx-3 md:mx-12">
 
           <Questions />
         </div>

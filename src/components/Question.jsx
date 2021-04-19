@@ -8,7 +8,6 @@ function Question(props) {
   let choice = [];
   const choiceTable = useContext(UserContext);
   var addChoice = (symbole) => {
-    // setChoice([...choice, symbole]);
     choice.push(symbole);
     choiceTable.push(symbole);
 
@@ -18,11 +17,9 @@ function Question(props) {
   var deleteChoice = (symbole) => {
     let indice = choice.indexOf(symbole);
     let indiceTable = choiceTable.indexOf(symbole);
-    // setChoice(choice.splice(indice, 1))
     choice.splice(indice, 1);
     choiceTable.splice(indiceTable, 1);
     console.log(choiceTable);
-    // setChoice(choice.filter((e) => e !== symbole));
   };
 
   var souvenirParent = (symboleName) => {
@@ -54,8 +51,12 @@ function Question(props) {
   return (
     <div className="mb-12">
       <div className="flex justify-center">
-        <div className="spicy text-3xl">{`${props.numero + " "} `}</div>
-        <div className="spicy text-3xl ml-1">{props.question}</div>
+        <div className="spicy text-2xl md:text-3xl">{`${
+          props.numero + " "
+        } `}</div>
+        <div className="spicy text-2xl md:text-3xl md:ml-1">
+          {props.question}
+        </div>
       </div>
 
       <div className="">
@@ -87,19 +88,15 @@ function Question(props) {
 
       {props.numero === "4. " && (
         <div
-          className={`flex justify-center items-center text-4xl titre transform -skew-y-6 pt-24`}
+          className={`flex justify-center items-center text-2xl md:text-4xl titre transform -skew-y-6 pt-8 md:pt-24`}
         >
           <button onClick={() => finish()} className="mr-6 but">
             Valider le quiz
           </button>
           <button onClick={() => playAgain()} className="ml-6  but">
-          <a
-            className=""
-            href="#top"
-          >
-           Rejouer
-          </a>
-           
+            <a className="" href="#top">
+              Rejouer
+            </a>
           </button>
         </div>
       )}

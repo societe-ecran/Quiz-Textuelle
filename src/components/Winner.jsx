@@ -33,11 +33,11 @@ function Winner() {
     return who.symbole === score[0].symbole;
   }
   const reste = WhoAreYou.find(cut);
-  youAre.push(reste)
+  youAre.push(reste);
 
   for (let i = 0; i < WhoAreYou.length; i++) {
     if (WhoAreYou[i].symbole === score[0].symbole) {
-      WhoAreYouCopy.splice(i,1);
+      WhoAreYouCopy.splice(i, 1);
     }
   }
 
@@ -45,65 +45,97 @@ function Winner() {
     youAre.push(element);
   });
 
-
-
   return (
     <>
-      <Carousel
-        plugins={[
-          "centered",
-          "infinite",
-          'clickToChange',
-          {
-            resolve: slidesToShowPlugin,
-            options: {
-              numberOfSlides: 2,
+      <div className="hidden md:inline">
+        <Carousel
+          plugins={[
+            "centered",
+            "infinite",
+            "clickToChange",
+            {
+              resolve: slidesToShowPlugin,
+              options: {
+                numberOfSlides: 2,
+              },
             },
-          },
-          // {
-          //   resolve: arrowsPlugin,
-          //   options: {
-          //     arrowLeft: <button><span className = "distro2 text-4xl">v</span></button>,
-          //     // arrowLeftDisabled:<button><Icon name="angle-left" /></button>,
-          //     arrowRight: <button><span className = "distro2 text-4xl">v</span></button>,
-          //     // arrowRightDisabled: <button><Icon name="angle-right" /></button>,
-          //     // addArrowClickHandler: true,
-          //   }
-          // }
-        ]}
-      >
-        {youAre.map((who, i) => {
-          return (
-            <>
-              <div class="container mx-auto my-20  ">
-                <div class="bg-white relative shadow-xl w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 mx-auto  ">
-                  <div class="flex justify-center">
-                    <div className="rounded-full mx-auto absolute -top-20 w-32 h-32 shadow-2xl bg-white">
-                      <div
-                        className={`${who.taille} 
-                       
-                        ${i === 0 && "fushia"}`}
+          ]}
+        >
+          {youAre.map((who, i) => {
+            return (
+              <>
+                <div class="container mx-auto my-20  ">
+                  <div class="bg-white relative shadow-xl w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 mx-auto hover:shadow-2xl ">
+                    <div class="flex justify-center">
+                      <div className="rounded-full mx-auto absolute -top-20 w-32 h-32 shadow-2xl bg-white">
+                        <div
+                          className={`${who.taille} ${i === 0 && "fushia "}`}
+                        >
+                          {symboles(who.symbole)}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-16">
+                      <h1
+                        className={`${who.font} ${who.tailleTitre} ${
+                          i === 0 && " fushia"
+                        } text-center px-12 mb-6 fin ml6 `}
                       >
-                        {symboles(who.symbole)}
+                        {i === 0 ? who.titre : who.titre2}
+                      </h1>
+                      <div className="w-full px-6 pb-6 text-l">{who.texte}</div>
+                      <div className="px-6 font-bold text-center Bubblegum">
+                        Pour creuser, rien de mieux qu'une petite biblio. Le pdf
+                        du questionnaire est disponible plus bas.
+                      </div>
+                      <div className="text-center transform rotate-90">
+                        <a
+                          className="distro2 text-6xl pt-6  text-center got "
+                          href="#suite"
+                        >
+                          v
+                        </a>
                       </div>
                     </div>
                   </div>
-                  <div class="mt-16">
-                    <h1
-                      className={`${who.font} ${who.tailleTitre} ${
-                        i === 0 && "fushia"
-                      } text-center px-12 mb-6 fin ml6 `}
-                    >
-                      {i === 0 ? who.titre : who.titre2}
-                    </h1>
-                    <div class="w-full px-6 pb-6 text-l">{who.texte}</div>
-                  </div>
+                </div>
+              </>
+            );
+          })}
+        </Carousel>
+      </div>
+
+      <div className=" md:hidden backdrop-opacity-0">
+        <div class="container mx-auto my-20  ">
+          <div class="bg-white relative shadow-xl mx-auto pt-3 ">
+            <div class="flex justify-center">
+              <div className="rounded-full mx-auto absolute -top-20 w-32 h-32 shadow-2xl bg-white">
+                <div className={`${youAre[0].taille} fushia `}>
+                  {symboles(youAre[0].symbole)}
                 </div>
               </div>
-            </>
-          );
-        })}
-      </Carousel>
+            </div>
+            <div className="">
+              <div className={`${youAre[0].font} ${youAre[0].tailleTitreSmart} px-3 pt-14 fushia text-center mb-6 `}>
+                { youAre[0].titre}
+              </div>
+              <div className="w-full px-6 pb-6 text-md">{youAre[0].texte}</div>
+              <div className="px-6 font-bold text-center Bubblegum">
+                Pour creuser, rien de mieux qu'une petite biblio. Le pdf du
+                questionnaire est disponible plus bas.
+              </div>
+              <div className="text-center transform rotate-90">
+                <a
+                  className="distro2 text-6xl pt-6  text-center got "
+                  href="#suite"
+                >
+                  v
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

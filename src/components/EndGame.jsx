@@ -70,6 +70,7 @@ function EndGame() {
   }, []);
 
   const playAgain = () => {
+    choiceTable.length=0;
     history.push("/");
   };
 
@@ -93,12 +94,6 @@ function EndGame() {
         className={`${scoreVisibility} ml6 flex justify-center mt-24 items-center `}
       >
         <span class="text-wrapper text-4xl">
-          {/* <span class="letter spicy">T</span>{" "}
-          <span class="letter spicy">u</span> <span class="letter spicy"></span>{" "}
-          <span class="letter spicy">a</span>{" "}
-          <span class="letter spicy">s</span> <span class="letter spicy"></span>
-          <span class="letter spicy">:</span>
-          <br /> */}
           <span class="letter spicy">{smile}</span>{" "}
           <span className="letter distro2 text-2xl">a</span>
           <br />
@@ -116,22 +111,13 @@ function EndGame() {
       </div>
 
       <div className={`${whoVisibility} `}>
-        {/* <Confetti
-      recycle={true}
-      numberOfPieces={500}
-      run={true}
-      wind={0.05}
-      // width={width}
-      // height={height}
-    /> */}
-
-        <div className="flex justify-center z">
+        <div className="flex justify-center z hidden md:inline ">
           <Confetti active={confetti} config={config} />
         </div>
 
         <div className="z2">{EtleWinnerIs}</div>
 
-        <div className=" mx-auto pt-12 w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 text-2xl transform -skew-y-6 ">
+        <div id= 'suite' className=" mx-3 md:mx-auto pt-12 w-6/6 md:w-2/3  lg:w-2/3 xl:w-2/3 text-l md:text-2xl transform -skew-y-6 ">
           <div className="Bubblegum">
             Nous considerons que le feminisme carceral et le reformisme sont des
             impasses politiques. la police et le systeme judiciaire sont des
@@ -142,15 +128,18 @@ function EndGame() {
             processus de justice transformatrice, ceci reste une affaire de
             situation.
           </div>
-          <div className="wmshapes text-right flex justify-end pt-3">
-            v <div className="Fighting pl-2">GROS KISS</div>
+          <div className='flex justify-end pt-3 '> 
+             <div className="wmshapes text-red-600 ">
+            v 
+          </div><div className="Fighting pl-2">GROS KISS</div>
           </div>
-          <div className="Feeling text-right pt-2 text-4xl">Textuelles</div>
+         
+          <div className="Feeling text-right pt-6 fushia text-3xl md:text-4xl">Textuelles</div>
           <div className=" text-right text-sm">textuelles@riseup.net </div>
         </div>
 
         <div className=" mx-auto w-5/6 md:w-2/3  lg:w-2/3 xl:w-2/3 ">
-          <div className="Filxgirl text-4xl  pt-24">BIBLIOGRAPHIE</div>
+          <div className="Filxgirl text-2xl md:text-4xl pb-3 pt-8 md:pt-24">BIBLIOGRAPHIE</div>
 
           <div className="text-l mb-12">
             <span className="font-bold">DORLIN Elsa</span>,{" "}
@@ -211,7 +200,7 @@ function EndGame() {
         </div>
 
         <div
-          className={`flex justify-center items-center pr-6 text-4xl titre transform -skew-y-6 pt-24`}
+          className={`flex justify-center items-center md:pr-6 text-2xl md:text-4xl titre transform -skew-y-6 pt-6 md:pt-24 mx-6 md:mx-0`}
         >
           <button onClick={() => playAgain()} className="pr-6  but">
             <a className="" href="#top">
@@ -219,7 +208,7 @@ function EndGame() {
             </a>
           </button>
 
-          <button className="pl-12 but">
+          <button className="pl-6 md:pl-12 but">
             <a className="" href={pdf} target="_blank" rel="noreferrer">
               Télécharger le Quizz
             </a>
