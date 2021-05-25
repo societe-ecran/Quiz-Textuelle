@@ -24,7 +24,10 @@ function Reponse(props) {
   };
 
   return (
-    <div className="flex justify-center mt-3 mb-2 items-center">
+    <div className="flex mt-3 mb-2 items-center text-left">
+      <div>
+        
+      </div>
       <div
         style={{ color }}
         onClick={() => handleClick()}

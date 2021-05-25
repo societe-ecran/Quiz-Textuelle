@@ -46,15 +46,7 @@ function ScoreCalcul() {
       return b.score - a.score ;
     });
   
-
-  //   for (let i = 0; i < WhoAreYou.length; i++) {
-  //   if (WhoAreYou[i].symbole === result[0].symbole ) {
-  //     console.log("trouvé");
-  //     youAre.push(WhoAreYou[i]);
-  //   }
-  // }
-
-
+console.log("result", result)
 
     return    result
 }

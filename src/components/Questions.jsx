@@ -7,8 +7,8 @@ function Questions() {
   return (
     <>
       <div className="text-center margin-x-auto spicy text-4xl pt-12 md:pt-24 pb:12 md:pb-24 ">
-        Coche 1 réponse au minimum pour chacune des questions. <br />2 au
-        maximum. 
+        Coche 1 réponse au minimum pour chacune des questions. <br />
+        2 au maximum. 
       </div>
       <div className='flex justify-center'>
           <a className="distro2 text-6xl pt-6 transform rotate-90 text-center got "href="#0">v</a>

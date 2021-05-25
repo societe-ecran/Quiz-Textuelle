@@ -6,6 +6,7 @@ import { Ellipsis } from "react-spinners-css";
 import { useHistory } from "react-router-dom";
 import pdf from "../images/guide.pdf";
 import Confetti from "react-dom-confetti";
+import figures from "./figures"
 // import useSound from "use-sound";
 // import applause from "../images/applause.mp3";
 
@@ -21,7 +22,7 @@ function EndGame() {
   var feuille = 0;
   var diams = 0;
 
-  const EtleWinnerIs = Winner();
+  // const EtleWinnerIs = Winner();
 
   for (let i = 0; i < choiceTable.length; ++i) {
     switch (choiceTable[i]) {
@@ -89,7 +90,7 @@ function EndGame() {
   };
 
   return (
-    <div className="">
+    <div>
       <div
         className={`${scoreVisibility} ml6 flex justify-center mt-24 items-center `}
       >
@@ -111,11 +112,22 @@ function EndGame() {
       </div>
 
       <div className={`${whoVisibility} `}>
-        <div className="flex justify-center z hidden md:inline ">
+        <div className="flex justify-center z  ">
           <Confetti active={confetti} config={config} />
         </div>
 
-        <div className="z2">{EtleWinnerIs}</div>
+        <div className="mt-44 mx-auto">
+          <div className =''>
+              {Winner()}
+          </div>
+        
+          </div>
+
+          {/* <div  id= 'figures'  className=" mt-44 pt-24">
+          {figures()}
+          </div> */}
+
+
 
         <div id= 'suite' className=" mx-3 md:mx-auto pt-12 w-6/6 md:w-2/3  lg:w-2/3 xl:w-2/3 text-l md:text-2xl transform -skew-y-6 ">
           <div className="Bubblegum">
@@ -129,7 +141,7 @@ function EndGame() {
             situation.
           </div>
           <div className='flex justify-end pt-3 '> 
-             <div className="wmshapes text-red-600 ">
+             <div className="wmshapes ">
             v 
           </div><div className="Fighting pl-2">GROS KISS</div>
           </div>

@@ -121,7 +121,12 @@
 }
 
 .etoiles {
-  width: 10em;
+  width: 5em;
+  height: auto;
+}
+
+.planete {
+  width: 5em;
   height: auto;
 }
 
@@ -214,4 +219,10 @@
 .body {cursor: url('./images/wand.cur'), auto;}
 
 
+@media (min-width: 640px) {
 
+  .etoiles {
+    width: 10em;
+    height: auto;
+  }
+}
