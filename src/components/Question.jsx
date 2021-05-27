@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Reponse from "./Reponse";
 import UserContext from "./utils/UserContext";
 import { useHistory } from "react-router-dom";
@@ -7,18 +7,21 @@ function Question(props) {
   const history = useHistory();
   let choice = [];
   const choiceTable = useContext(UserContext);
+
+const [nbChoice, setNbChoice] = useState(choice)
+
   var addChoice = (symbole) => {
     choice.push(symbole);
     choiceTable.push(symbole);
-
+    setNbChoice(choice.push(symbole))
   };
 
   var deleteChoice = (symbole) => {
     let indice = choice.indexOf(symbole);
     let indiceTable = choiceTable.indexOf(symbole);
     choice.splice(indice, 1);
+    setNbChoice(choice.splice(indice, 1))
     choiceTable.splice(indiceTable, 1);
-
   };
 
   var souvenirParent = (symboleName) => {
@@ -59,7 +62,7 @@ function Question(props) {
       </div>
 
       <div className="">
-        {props.reponses.map((reponse) => {
+        {props.reponses.map((reponse,i) => {
           return (
             <>
               <Reponse
@@ -69,6 +72,7 @@ function Question(props) {
                 symbole={reponse.symbole}
                 choice={choice}
                 taille={reponse.taille}
+                key={i}
               />
             </>
           );
@@ -89,9 +93,18 @@ function Question(props) {
         <div
           className={`flex justify-center items-center text-2xl md:text-4xl titre transform -skew-y-6 pt-8 md:pt-24`}
         >
-          <button onClick={() => finish()} className="mr-6 but">
-            Valider le quiz
-          </button>
+
+          {nbChoice.length<3 ? 
+           <button disabled onClick={() => finish()} className="mr-6 text-gray-400">
+           Valider le quiz
+         </button>
+         :
+         <button  onClick={() => finish()} className="mr-6 but">
+         Valider le quiz
+       </button>
+        
+        
+        }
           <button onClick={() => playAgain()} className="ml-6  but">
             <a className="" href="#top">
               Rejouer

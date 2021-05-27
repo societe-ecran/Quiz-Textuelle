@@ -17,12 +17,13 @@ function Questions() {
         {dataQuestions.map((question, i) => {
           return (
             <>
-              <div id={i} className="md:mx-auto w-6/6 md:w-2/3  lg:w-2/3 xl:w-2/3  mt-64 pt-64 mb-3 ">
+              <div id={i}  key={i} className="md:mx-auto w-6/6 md:w-2/3  lg:w-2/3 xl:w-2/3  mt-64 pt-64 mb-3 ">
                 <Question
                   numero={question.numero}
                   question={question.question}
                   reponses={question.reponses}
                   anchor={i+1}
+                  key={i}
                 />
               </div>
             </>

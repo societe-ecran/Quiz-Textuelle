@@ -220,11 +220,11 @@ function EndGame() {
             </a>
           </button>
 
-          <button className="pl-6 md:pl-12 but">
+          {/* <button className="pl-6 md:pl-12 but">
             <a className="" href={pdf} target="_blank" rel="noreferrer">
               Télécharger le Quizz
             </a>
-          </button>
+          </button> */}
         </div>
 
         <div className="flex justify-center pt-12 pb-6">
