@@ -11,7 +11,6 @@ function Question(props) {
     choice.push(symbole);
     choiceTable.push(symbole);
 
-    console.log(choiceTable);
   };
 
   var deleteChoice = (symbole) => {
@@ -19,7 +18,7 @@ function Question(props) {
     let indiceTable = choiceTable.indexOf(symbole);
     choice.splice(indice, 1);
     choiceTable.splice(indiceTable, 1);
-    console.log(choiceTable);
+
   };
 
   var souvenirParent = (symboleName) => {

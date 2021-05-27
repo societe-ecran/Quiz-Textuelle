@@ -4,10 +4,6 @@ import WhoAreYouCopy from "./dataWhoAreYouCopy";
 import symboles from "./utils/symboles";
 import ScoreCalcul from "./ScoreCalcul";
 import "../App.css";
-import Carousel, {
-  slidesToShowPlugin,
-  //  arrowsPlugin
-} from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import figures from "./figures";
 
@@ -143,7 +139,6 @@ function Winner() {
         </div>
       </div>
 
-      {/* version smartphone
 
       <div className=" md:hidden backdrop-opacity-0">
         <div class="container mx-auto mt-6  ">
@@ -164,12 +159,13 @@ function Winner() {
               <div className="w-full px-6 pb-6 text-md">{youAre[0].texte}</div>
               <div className="">
                 <div className="  px-6 font-bold text-center Bubblegum">
-                  Decouvres les autres figures du quiz.
+                Pour creuser, rien de mieux qu'une petite biblio. Le pdf
+                        du questionnaire est disponible plus bas.
                 </div>
                 <div className="text-center transform rotate-90">
                   <a
                     className="distro2 text-6xl pt-6  text-center got "
-                    href="#figures"
+                    href="#suite"
                   >
                     v
                   </a>
@@ -178,7 +174,7 @@ function Winner() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       <div id="figures" className=" mt-44 pt-24">
         {Figures}

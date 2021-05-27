@@ -1,8 +1,6 @@
 import React from 'react'
 import WhoAreYou from "./dataWhoAreYou";
-import WhoAreYouCopy from "./dataWhoAreYouCopy";
 import symboles from "./utils/symboles";
-import ScoreCalcul from "./ScoreCalcul";
 import "../App.css";
 import Carousel, {
   slidesToShowPlugin,

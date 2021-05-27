@@ -29,14 +29,14 @@ function App() {
           opacity: [0, 1],
           duration: 400,
           easing: "easeOutExpo",
-          delay: 1400,
+          delay: 1200,
         })
         .add({
           targets: ".encore",
           opacity: [0, 1],
           easing: "easeInOutQuad",
           duration: 1600,
-          delay: 1600,
+          delay: 1400,
         })
         .add({
           targets: ".imageMove",

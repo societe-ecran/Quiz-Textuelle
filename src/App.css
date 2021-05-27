@@ -220,6 +220,10 @@
 
 
 @media (min-width: 640px) {
+  .planete {
+    width: 10em;
+    height: auto;
+  }
 
   .etoiles {
     width: 10em;

@@ -6,7 +6,7 @@ import { Ellipsis } from "react-spinners-css";
 import { useHistory } from "react-router-dom";
 import pdf from "../images/guide.pdf";
 import Confetti from "react-dom-confetti";
-import figures from "./figures"
+
 // import useSound from "use-sound";
 // import applause from "../images/applause.mp3";
 

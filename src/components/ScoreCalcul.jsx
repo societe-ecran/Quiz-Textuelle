@@ -14,7 +14,7 @@ function ScoreCalcul() {
     //   { symbole: 'feuille', score:0 },
     //   { symbole: 'smile', score:0 },
     // ];
-    console.log(choiceTable)
+ 
     for (let i = 0; i < choiceTable.length; ++i) {
       switch (choiceTable[i]) {
         case "smile":
@@ -46,7 +46,6 @@ function ScoreCalcul() {
       return b.score - a.score ;
     });
   
-console.log("result", result)
 
     return    result
 }
