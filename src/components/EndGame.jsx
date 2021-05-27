@@ -230,8 +230,9 @@ function EndGame() {
         <div className="flex justify-center pt-12 pb-6">
           Made with
           <div className="wmshapes text-red-600  pl-1 pr-1">{" v "}</div>
-          <span>{" by {Société Ecrans}"}</span>
+          <span>{" by { societe-ecrans(at)riseup.net }"}</span>
         </div>
+        
       </div>
     </div>
   );
