@@ -159,8 +159,8 @@ function Winner() {
               <div className="w-full px-6 pb-6 text-md">{youAre[0].texte}</div>
               <div className="">
                 <div className="  px-6 font-bold text-center Bubblegum">
-                Pour creuser, rien de mieux qu'une petite biblio. Le pdf
-                        du questionnaire est disponible plus bas.
+                Pour creuser, rien de mieux qu'une petite biblio. 
+                {/* Le pdf du questionnaire est disponible plus bas. */}
                 </div>
                 <div className="text-center transform rotate-90">
                   <a
