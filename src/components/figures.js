@@ -52,7 +52,7 @@ export default function figures() {
                       <div className="w-full px-6 pb-6 text-l">{who.texte}</div>
                       <div className="px-6 font-bold text-center Bubblegum">
                         Pour creuser, rien de mieux qu'une petite biblio. 
-                        {/* Le pdf du questionnaire est disponible plus bas. */}
+                        Le pdf du questionnaire est disponible plus bas.
                       </div>
                       <div className="text-center transform rotate-90">
                         <a

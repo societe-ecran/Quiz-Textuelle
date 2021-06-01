@@ -4,7 +4,7 @@ import anime from "animejs/lib/anime.es.js";
 import Winner from "./Winner";
 import { Ellipsis } from "react-spinners-css";
 import { useHistory } from "react-router-dom";
-import pdf from "../images/guide.pdf";
+import pdf from "../images/quizz.pdf";
 import Confetti from "react-dom-confetti";
 
 // import useSound from "use-sound";
@@ -220,11 +220,11 @@ function EndGame() {
             </a>
           </button>
 
-          {/* <button className="pl-6 md:pl-12 but">
+          <button className="pl-6 md:pl-12 but">
             <a className="" href={pdf} target="_blank" rel="noreferrer">
               Télécharger le Quizz
             </a>
-          </button> */}
+          </button>
         </div>
 
         <div className="flex justify-center pt-12 pb-6">

@@ -96,11 +96,11 @@ const [nbChoice, setNbChoice] = useState(choice)
 
           {nbChoice.length<3 ? 
            <button disabled onClick={() => finish()} className="mr-6 text-gray-400">
-           Valider le quiz
+           Valider le quizz
          </button>
          :
          <button  onClick={() => finish()} className="mr-6 but">
-         Valider le quiz
+         Valider le quizz
        </button>
         
         

@@ -48,18 +48,17 @@ const dataQuestions = [
     numero:"4. ",
     question: "Monsieur Bournichon, doyen de l'université, multiplie les remarques sexistes en amphi et en tire une grande fierté :",
     reponses: [
-        { symbole: "smile", taille:'text-4xl', texte: "Tu affiches sa tête de sale porc dans les couloirs de la fac en dénonçant son attitude et lance le #bournichonlecochon sur Instagram." },
+        { symbole: "peace", taille:'text-4xl', texte: "Tu affiches sa tête de sale porc dans les couloirs de la fac en dénonçant son attitude et lance le #bournichonlecochon sur Instagram." },
         { symbole: "peace", taille:'text-4xl', texte: "Tu t'organises avec d'autres personnes de ta promo pour le confronter en amphi lors de sa prochaine remarque déplacée." },
         { symbole: "diams", taille:'text-2xl', texte: "Avec tes camarades de classe, tu profites d'une réunion pour coller à la glu la serrure de la salle des profs. Vous leur glissez sous la porte des pistes de réflexion sur les rapports de pouvoir sexiste, classistes et racistes à l'université. " },
         { symbole: "feuille", taille:'text-4xl', texte: "Tu écris une lettre à l'administration de la fac en leur demandant de sévir et menace de lancer une pétition." },
         { symbole: "smile", taille:'text-4xl', texte: "Tu portes plainte pour harcèlement." },
-        { symbole: "peace",taille:'text-4xl',  texte: "Tu montes un groupe de soutien et d'écoute pour les personnes subissant les vils agissement de Bournichon." },
-        { symbole: "diams", taille:'text-2xl', texte: "Tu milites pour l'ouverture d'une antenne du commissariat sur le campus. Pour que ça change, il faut que plus de personnes portent plainte. " },
+        { symbole: "diams",taille:'text-4xl',  texte: "Tu montes un groupe de soutien et d'écoute pour les personnes subissant les vils agissement de Bournichon." },
+        { symbole: "smile", taille:'text-2xl', texte: "Tu milites pour l'ouverture d'une antenne du commissariat sur le campus. Pour que ça change, il faut que plus de personnes portent plainte. " },
         { symbole: "feuille",taille:'text-4xl', texte: "Aves les étudiant-e-s de droits vous lancez une consultation parmi les étudiant-e-s et le personnel de la fac en vue d'une charte de bonne conduite. " },
       ],
     choix: [],
   },
- 
 ];
 
 export default dataQuestions
